@@ -1,0 +1,150 @@
+input[type="range"] {
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 2px;
+  background: #E1E1E1;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(#FF9514, #FF9514);
+
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  background: #ff9514;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  -webkit-appearance: none;
+  margin-top: -10px;
+  box-shadow: none;
+}
+
+input[type="range"]::-ms-fill-lower {
+  background-color: #ff9514;
+}
+
+input[type="range"]::-ms-fill-upper {
+  background-color: #e1e1e1;
+}
+
+.form__inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 32px;
+  margin-top: 32px;
+}
+
+.form__label {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #575757;
+}
+
+.form__input {
+  box-sizing: border-box;
+  border: 2px solid #f3f3f4;
+
+  &:focus-within {
+    background: none;
+    border: 2px solid #f3f3f4;
+  }
+
+  box-sizing: border-box;
+  margin-top: 24px;
+  background: #f3f3f4;
+  border-radius: 16px;
+  padding: 16px 24px;
+  position: relative;
+
+  &_initial {
+    padding: 7px 7px 7px 24px;
+  }
+
+  &_disabled {
+    opacity: 0.5;
+  }
+}
+
+.form__range {
+  position: absolute;
+  left: 24px;
+  bottom: 0;
+  max-width: calc(100% - 48px);
+}
+
+.form__text-wrpr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form__text {
+  max-width: 300px;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 36px;
+
+  &_initial {
+    font-size: 20px;
+    line-height: 120%;
+    padding: 15px 17px;
+    background: #ebebec;
+    border-radius: 16px;
+    display: flex;
+
+    &-input {
+      color: inherit;
+      font-size: 20px;
+      line-height: 120%;
+      font-weight: 900;
+      width: 30px;
+    }
+  }
+
+  &:disabled {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 1224px) {
+  .form__inputs {
+    grid-template-columns: 1fr;
+    margin-top: 44px;
+  }
+
+}
+
+@media screen and (max-width: 650px) {
+  .form__inputs {
+    margin-top: 32px;
+    gap: 16px;
+  }
+
+  .form__input {
+    margin-top: 8px;
+    padding: 20px;
+
+    &_initial {
+      padding: 6px 6px 6px 20px;
+    }
+  }
+
+  .form__text {
+    font-size: 22px;
+    line-height: 20px;
+  }
+
+  .form__label {
+    font-size: 14px;
+    line-height: 136%;
+  }
+
+}

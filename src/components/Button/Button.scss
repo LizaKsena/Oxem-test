@@ -1,0 +1,40 @@
+.form__submit {
+  background: #ff9514;
+  border-radius: 40px;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 36px;
+  color: #ffffff;
+  padding: 14px 0 18px 0;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #111111;
+  }
+
+  &:disabled {
+    background-color: #ff951466;
+    cursor: default;
+  }
+}
+
+@media screen and (max-width: 1224px) {
+
+  .form__submit {
+    align-self: flex-start;
+    width: 345px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+
+  .form__submit {
+    font-size: 22px;
+    line-height: 20px;
+    padding: 18px 0 22px 0;
+    align-self: auto;
+    width: auto;
+  }
+}

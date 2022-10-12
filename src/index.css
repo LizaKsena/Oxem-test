@@ -1,0 +1,53 @@
+/* reset */
+h1,
+p,
+input,
+body,
+ul,
+li,
+button {
+  padding: 0;
+  margin: 0;
+}
+
+input,
+button {
+  background: none;
+  border: none;
+  color: inherit;
+  outline: none;
+  font-family: inherit;
+  font-weight: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+@font-face {
+  font-family: "Nekst-Black";
+  src: url("./fonts/Nekst/Nekst-Black.woff") format("woff"),
+    url("./fonts/Nekst/Nekst-Black.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("./fonts/Gilroy/Gilroy-Regular.woff") format("woff"),
+    url("./fonts/Gilroy/Gilroy-Regular.woff2") format("woff2");
+}
+
+body {
+  font-family: "Nekst-Black";
+  font-style: normal;
+  color: #575757;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+@media screen and (max-width: 1224px) {
+  body {
+    display: block;
+  }
+}
